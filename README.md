@@ -31,6 +31,7 @@ Some of the key features of ownCloud 10.0.10 are as follows:
 
 For more details, see [ownCloud 10.0 Features](https://github.com/owncloud/core/wiki/ownCloud-10.0-Features) page.
 # System Requirements
+
 Platform |	Options
 ----------|---------
 Operating System |	Centos Linux 6 and 7,  Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3, openSUSE Tumbleweed and Leap 15.0, 42.3, Ubuntu 16.04 and 18.04
@@ -277,6 +278,7 @@ The first time that you access the login page through HTTPS, a browser warning a
 # Adding a User Account
 On the User management page of ownCloud Web UI, you can add a new user account.
 User accounts have the following properties:
+
 
 Property Name              |	      Description
 ---------------------------|---------------------------------------------------------
