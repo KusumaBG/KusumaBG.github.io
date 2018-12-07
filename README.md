@@ -111,8 +111,8 @@ On RedHat Enterprise Linux, you need the following extensions:
 sudo yum install httpd mariadb-server php72 php72-php \
   php72-php-gd php72-php-mbstring php72-php-mysqlnd
 ```
-## How to Install ownCloud Server
-Perform the following steps to Install ownCloud server.
+## How to Install ownCloud
+Perform the following steps to Install ownCloud.
 1.	Download the archive of the latest ownCloud version.
 2.	Go to the ownCloud Download Page.
 3.	Go to Download ownCloud Server > Download > Archive file for server owners and download either the tar.bz2 or .zip archive. 
