@@ -1,2 +1,2 @@
 # QSGownCloud.github.io
-A quick start guide to install ownCloud.
+A quick start guide to install ownCloud server.
