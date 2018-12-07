@@ -36,7 +36,7 @@ The following table provides system requirements for installing the ownCloud ser
 
 Platform|Options
 --------|-------
-Operating System | Centos Linux 6 and 7,  Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3, openSUSE Tumbleweed and Leap 15.0, 42.3, Ubuntu 16.04 and 18.04
+Operating System|Centos Linux 6 and 7,  Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3, openSUSE Tumbleweed and Leap 15.0, 42.3, Ubuntu 16.04 and 18.04
 Database	MySQL or MariaDB 5.5+ | Oracle 11g, PostgreSQL, SQLite
 Web server | Apache 2.4 with prefork Multi-Processing Module (MPM) and mod_php
 PHP Runtime* | 5.6, 7.0, 7.1, and 7.2 (most preferred)
