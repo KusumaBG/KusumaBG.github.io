@@ -126,7 +126,6 @@ Perform the following steps to Install ownCloud.
 This downloads a file named owncloud-x.y.z.tar.bz2 or owncloud-x.y.z.zip (where x.y.z is the version number).
 4.	Download its corresponding checksum file. For example, owncloud-x.y.z.tar.bz2.md5, or owncloud-x.y.z.tar.bz2.sha256.
 5.	Verify the MD5 or SHA256 sum.
-
 ```
 md5sum -c owncloud-x.y.z.tar.bz2.md5 < owncloud-x.y.z.tar.bz2
 sha256sum -c owncloud-x.y.z.tar.bz2.sha256 < owncloud-x.y.z.tar.bz2
@@ -312,6 +311,7 @@ Quota	| The maximum disk space assigned to each user. Any user that exceeds the 
 
 ## How to Add a New User
 To create a user account, select **users** from the **users** drop down box and click the **Create** button as shown below.
+
 ![Create User](/docs/AddNewUser.png)
  
 You need to enter new Login Name of the user and the initial Password. You can assign a group membership by selecting **Add Group** option.
