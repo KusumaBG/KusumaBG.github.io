@@ -73,6 +73,7 @@ On Ubuntu 16.04 LTS server, install the required modules for ownCloud installati
 *	The Hash extension is available from PHP 5.1.2 by default
 *	php7.2-xml provides DOM, SimpleXML, XML, & XMLWriter
 *	php7.2-zip provides zlib
+
 ### smbclient
 To install smbclient, you can use the following script. It first installs PEAR, which at the time of writing installs only version 1.9.4. However, smbclient requires version 1.9.5. So, the final two commands upgrade PEAR to version 1.9.5 and then install smbclient using Pecl.
 ```
@@ -101,10 +102,11 @@ If you are planning to run additional apps, you might require additional package
 
 **Note:**
 During the installation of the MySQL/MariaDB server, you will be prompted to create a root password. Be sure to remember your password as you will need it during ownCloud database setup.
+
 ### Extensions on RedHat Enterprise Linux 7.2
 On RedHat Enterprise Linux, you need the following extensions:
- ```
- # Enable the RHEL Server 7 repository
+```
+# Enable the RHEL Server 7 repository
     subscription-manager repos --enable rhel-server-rhscl-7-eus-rpms
 
 # Install the required packages
@@ -216,6 +218,7 @@ To install ownCloud, first [download the source](https://owncloud.org/install/#i
 Next, you need to set your webserver user to be the owner of your unpacked owncloud directory, as in the example below.
 ```$ sudo chown -R www-data:www-data /var/www/owncloud/```
 Use the ```occ``` command, from the root directory of the ownCloud source, to perform the installation. The following examples shows how to perform installation.
+
 ```
 # Assuming you’ve unpacked the source to /var/www/owncloud/
 $ cd /var/www/owncloud/
