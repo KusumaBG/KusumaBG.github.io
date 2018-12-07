@@ -231,6 +231,7 @@ To install ownCloud, first [download the source](https://owncloud.org/install/#i
 Next, you need to set your webserver user to be the owner of your unpacked owncloud directory, as in the example below.
 ```$ sudo chown -R www-data:www-data /var/www/owncloud/```
 Use the ```occ``` command, from the root directory of the ownCloud source, to perform the installation. The following examples shows how to perform installation.
+
 ```
 # Assuming you’ve unpacked the source to /var/www/owncloud/
 $ cd /var/www/owncloud/
@@ -338,4 +339,4 @@ Using web interface to access files on ownCloud is easy and convenient as you ca
 *	Easily add files from your device to ownCloud
 *	Two-factor authentication
 
-You can get ownCloud Android app by logging into your ownCloud server from your Android device using a Web browser such as Chrome, Firefox, or Dolphin. For more information see [ownCloud Android App Manual](https://doc.owncloud.org/android/).
+You can get ownCloud Android app by logging into your ownCloud server from your Android device using a Web browser such as Chrome, Firefox, or Dolphin. For more information, see [ownCloud Android App Manual](https://doc.owncloud.org/android/).
