@@ -32,12 +32,12 @@ Some of the key features of ownCloud 10.0.10 are as follows:
 For more details, see [ownCloud 10.0 Features](https://github.com/owncloud/core/wiki/ownCloud-10.0-Features) page.
 # System Requirements
 
-Platform  | 	Options
-----------|------------------------------------------------------------------
-Operating System |	Centos Linux 6 and 7,  Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3, openSUSE Tumbleweed and Leap 15.0, 42.3, Ubuntu 16.04 and 18.04
+Platform | Options
+---------|---------
+Operating System | Centos Linux 6 and 7,  Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3, openSUSE Tumbleweed and Leap 15.0, 42.3, Ubuntu 16.04 and 18.04
 Database	MySQL or MariaDB 5.5+ | Oracle 11g, PostgreSQL, SQLite
 Web server | Apache 2.4 with prefork Multi-Processing Module (MPM) and mod_php
-PHP Runtime*	| 5.6, 7.0, 7.1, and 7.2 (most preferred)
+PHP Runtime* | 5.6, 7.0, 7.1, and 7.2 (most preferred)
 ## Memory Requirements
 Memory requirements for running an ownCloud server varies depending on the numbers of users and files, and volume of server activity. ownCloud requires a minimum of 128MB RAM, however, a minimum of 512MB is recommended.
 ## Database Requirements
@@ -280,14 +280,15 @@ On the User management page of ownCloud Web UI, you can add a new user account.
 User accounts have the following properties:
 
 
-Property Name              |	      Description
----------------------------|---------------------------------------------------------
-Login Name (Username)      |	The unique ID of an ownCloud user that cannot be changed.
+Property Name|Description
+-------------|-----------
+Login Name (Username) |	The unique ID of an ownCloud user that cannot be changed.
 Full Name |	The display name of the user that appears on file shares, the ownCloud Web interface, and emails. Administrators and users can change the Full Name any whenever needed. If the Full Name is not set, then a default name with the format, login name.ownCloud domain is assigned.
 Password |	The administrator sets the first password for the user. Both the user and the administrator can change the password later.
 Groups |	Group memberships are assigned to users. By default, new users are not assigned to any groups.
 Group Admin |	Group admins are granted administrative privileges on specific groups, and can add and remove users from their groups.
 Quota	| The maximum disk space assigned to each user. Any user that exceeds the quota cannot upload or sync data. You have the option to include external storage in user quotas.
+
 ## How to Add a New User
 To create a user account, select **users** from the **users** drop down box and click the **Create** button as shown below.
 ![Create User](/docs/AddNewUser.png)
