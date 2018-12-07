@@ -134,7 +134,6 @@ md5sum  -c owncloud-x.y.z.zip.md5 < owncloud-x.y.z.zip
 sha256sum  -c owncloud-x.y.z.zip.sha256 < owncloud-x.y.z.zip
 ```
 6.	(Optional) Verify the PGP signature.
-
 ```
 wget https://download.owncloud.org/community/owncloud-x.y.z.tar.bz2.asc
 wget https://owncloud.org/owncloud.asc
@@ -149,6 +148,7 @@ gpg --verify owncloud-x.y.z.tar.bz2.asc owncloud-x.y.z.tar.bz2
    unzip owncloud-x.y.z.zip
 ```
 This unpacks to a single owncloud directory
+
 8.	Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, you install ownCloud in your Apache document root.
 ```
 cp -r owncloud /path/to/webserver/document-root
@@ -186,14 +186,18 @@ In case you need additional configurations, see [Additional Apache Configuration
 Apache prefork has to be used. Don’t use a threaded MPM like event or worker with mod_php, because PHP is currently not thread safe.
 
 ## How to Enable SSL
+
 **Note:** You can use ownCloud over plain HTTP, but you must use SSL/TLS to encrypt all of your server traffic, and to protect user’s logins and data in transit.
 Apache installed under Ubuntu comes with a simple self-signed certificate. All you have to do is to enable the ssl module and the default site. Open a terminal and run:
-```a2enmod ssl
+```
+a2enmod ssl
 a2ensite default-ssl
 service apache2 reload
 ```
 **Note:** Self-signed certificates have their drawbacks when you plan to make your ownCloud server publicly accessible. Hence, you can get a certificate signed by a commercial signing authority.
+
 ## How to Run the Installation Wizard
+
 After restarting Apache, you must complete your installation by running either the Graphical Installation Wizard or on the command line with the ```occ``` command. To enable this, temporarily change the ownership on your ownCloud directories to your HTTP user (see [Set Strong Directory Permissions](https://doc.owncloud.com/server/10.0/admin_manual/installation/source_installation.html#strong-perms-label) to learn how to find your HTTP user):
 ```
 chown -R www-data:www-data /var/www/owncloud/
@@ -286,7 +290,7 @@ When all the containers are running, it takes a few minutes for ownCloud to be f
 # Logging In
 To log in to the ownCloud UI, open ```https://localhost``` in your browser of choice. The ownCloud login screen is displayed.
 
-![LoginPage](/LogIn.png)
+![LoginPage](/docs/LogIn.png)
 
  Enter the username and password that you stored in ```.env``` earlier.
 The first time that you access the login page through HTTPS, a browser warning appears, as the SSL certificate in the Docker setup is self-signed. However, the self-signed certificate can be overwritten with a valid certificate within the host volume.
