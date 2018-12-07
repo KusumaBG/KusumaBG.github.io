@@ -33,9 +33,8 @@ For more details, see [ownCloud 10.0 Features](https://github.com/owncloud/core/
 # System Requirements
 The following table provides system requirements for installing the ownCloud server.
 
-
 Platform|Options
--------|------
+----|----
 Operating System|Centos Linux 6 and 7, Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3
 Database	MySQL or MariaDB 5.5+|Oracle 11g, PostgreSQL, SQLite
 Web server|Apache 2.4 with prefork Multi-Processing Module (MPM) and mod_php
@@ -262,7 +261,7 @@ docker-compose up -d
 When the process completes, check whether all the containers have successfully started, by running the ```docker-compose ps``` command. The following example shows the output when all the containers have started:
 ```
  Name               Command                             State       Ports
--------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 server_db_1         /usr/bin/entrypoint /bin/s ...      Up          3306/tcp
 server_owncloud_1   /usr/local/bin/entrypoint  ...      Up          0.0.0.0:8080->8080/tcp
 server_redis_1      /bin/s6-svscan /etc/s6              Up          6379/tcp
