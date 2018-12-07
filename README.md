@@ -58,8 +58,8 @@ As the ownCloud tar archive contains all of the required third-party PHP librari
 You need to install the required modules before installing ownCloud using package manager.
 ### Modules on Ubuntu 16.04 LTS Server
 On Ubuntu 16.04 LTS server, install the required modules for ownCloud installation by using Apache and MariaDB. Issue the following commands in a terminal:
-   ``` 
-   #If the add-apt-repository command is not available install software-properties-common
+``` 
+#If the add-apt-repository command is not available install software-properties-common
     sudo add-apt-repository ppa:ondrej/php
     sudo apt-get update
     sudo apt-get install -y apache2 mariadb-server libapache2-mod-php7.2 \
@@ -73,8 +73,11 @@ On Ubuntu 16.04 LTS server, install the required modules for ownCloud installati
 *	The Hash extension is available from PHP 5.1.2 by default
 *	php7.2-xml provides DOM, SimpleXML, XML, & XMLWriter
 *	php7.2-zip provides zlib
+
+
 ### smbclient
 To install smbclient, you can use the following script. It first installs PEAR, which at the time of writing installs only version 1.9.4. However, smbclient requires version 1.9.5. So, the final two commands upgrade PEAR to version 1.9.5 and then install smbclient using Pecl.
+
 ```
 #!/usr/bin/expect
 spawn wget -O /tmp/go-pear.phar http://pear.php.net/go-pear.phar
@@ -91,8 +94,10 @@ spawn rm /tmp/go-pear.phar
 pear install PEAR-1.9.5
 pecl install smbclient
 ```
+
 ### SSH2
 To install SSH2, which provides SFTP, you can use the following command:
+
 ```
 spawn pecl install ssh2
 ```
@@ -100,14 +105,16 @@ spawn pecl install ssh2
 If you are planning to run additional apps, you might require additional packages. See [Prerequisites](https://doc.owncloud.com/server/10.0/admin_manual/installation/source_installation.html#prerequisites-label) for details.
 
 **Note:**
+
 During the installation of the MySQL/MariaDB server, you will be prompted to create a root password. Be sure to remember your password as you will need it during ownCloud database setup.
+
 ### Extensions on RedHat Enterprise Linux 7.2
 On RedHat Enterprise Linux, you need the following extensions:
- ```
- # Enable the RHEL Server 7 repository
+```
+#Enable the RHEL Server 7 repository
     subscription-manager repos --enable rhel-server-rhscl-7-eus-rpms
 
-# Install the required packages
+#Install the required packages
 sudo yum install httpd mariadb-server php72 php72-php \
   php72-php-gd php72-php-mbstring php72-php-mysqlnd
 ```
@@ -119,6 +126,7 @@ Perform the following steps to Install ownCloud.
 This downloads a file named owncloud-x.y.z.tar.bz2 or owncloud-x.y.z.zip (where x.y.z is the version number).
 4.	Download its corresponding checksum file. For example, owncloud-x.y.z.tar.bz2.md5, or owncloud-x.y.z.tar.bz2.sha256.
 5.	Verify the MD5 or SHA256 sum.
+
 ```
 md5sum -c owncloud-x.y.z.tar.bz2.md5 < owncloud-x.y.z.tar.bz2
 sha256sum -c owncloud-x.y.z.tar.bz2.sha256 < owncloud-x.y.z.tar.bz2
@@ -126,6 +134,7 @@ md5sum  -c owncloud-x.y.z.zip.md5 < owncloud-x.y.z.zip
 sha256sum  -c owncloud-x.y.z.zip.sha256 < owncloud-x.y.z.zip
 ```
 6.	(Optional) Verify the PGP signature.
+
 ```
 wget https://download.owncloud.org/community/owncloud-x.y.z.tar.bz2.asc
 wget https://owncloud.org/owncloud.asc
@@ -133,12 +142,12 @@ gpg --import owncloud.asc
 gpg --verify owncloud-x.y.z.tar.bz2.asc owncloud-x.y.z.tar.bz2
 ```
 7.	Extract the archive contents. Run the appropriate unpacking command for your archive type.
-    ```
-    tar -xjf owncloud-x.y.z.tar.bz2
-    ```
-    ```
-    unzip owncloud-x.y.z.zip
-    ```
+```
+   tar -xjf owncloud-x.y.z.tar.bz2
+```
+```
+   unzip owncloud-x.y.z.zip
+```
 This unpacks to a single owncloud directory
 8.	Copy the ownCloud directory to its final destination. When you are running the Apache HTTP server, you install ownCloud in your Apache document root.
 ```
@@ -147,6 +156,7 @@ cp -r owncloud /path/to/webserver/document-root
 where /path/to/webserver/document-root is replaced by the document root of your Web server:
 cp -r owncloud /var/www
 On other HTTP servers, you must install ownCloud outside of the document root.
+
 # How to Configure Apache Web Server
 On Debian, Ubuntu, and their derivatives, Apache installs with a useful configuration, so all you have to do is create a ```/etc/apache2/sites-available/owncloud.conf``` file with these lines in it, replacing the Directory and other file paths with your own file paths:
 ```
@@ -171,8 +181,10 @@ Then create a symlink to ```/etc/apache2/sites-enabled:```
 ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/sites-enabled/owncloud.conf
 ```
 In case you need additional configurations, see [Additional Apache Configurations](https://doc.owncloud.com/server/10.0/admin_manual/installation/source_installation.html#apache-configuration-label).
+
 ### Multi-Processing Module (MPM)
 Apache prefork has to be used. Don’t use a threaded MPM like event or worker with mod_php, because PHP is currently not thread safe.
+
 ## How to Enable SSL
 **Note:** You can use ownCloud over plain HTTP, but you must use SSL/TLS to encrypt all of your server traffic, and to protect user’s logins and data in transit.
 Apache installed under Ubuntu comes with a simple self-signed certificate. All you have to do is to enable the ssl module and the default site. Open a terminal and run:
