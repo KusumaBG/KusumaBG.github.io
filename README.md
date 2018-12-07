@@ -33,8 +33,10 @@ For more details, see [ownCloud 10.0 Features](https://github.com/owncloud/core/
 # System Requirements
 The following table provides system requirements for installing the ownCloud server.
 
+
+
 Platform|Options
-----|----
+-----|----
 Operating System|Centos Linux 6 and 7, Debian 7 and 8, Fedora 27 and 28, Red Hat Enterprise Linux 6 and 7, SUSE Linux Enterprise Server, 12 with SP1, SP2 and SP3
 Database	MySQL or MariaDB 5.5+|Oracle 11g, PostgreSQL, SQLite
 Web server|Apache 2.4 with prefork Multi-Processing Module (MPM) and mod_php
