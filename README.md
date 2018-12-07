@@ -51,7 +51,7 @@ Note the following requirements if you are running ownCloud together with a MySQ
 * “READ COMMITTED” transaction isolation level (See: [MySQL / MariaDB “READ COMMITTED” transaction isolation level](https://doc.owncloud.com/server/10.0/admin_manual/configuration/database/linux_database_configuration.html#db-transaction-label))
 See [deployment considerations](https://doc.owncloud.com/server/10.0/admin_manual/installation/deployment_considerations.html) and [deployment recommendations](https://doc.owncloud.com/server/10.0/admin_manual/installation/deployment_recommendations.html) for other considerations and recommendations.
 
-# Installing ownCloud Server on Linux Using Package Manager
+# Installing ownCloud on Linux Using Package Manager
 Install ownCloud on Linux from Open Build Service packages and you can use package manager to keep the ownCloud server up-to-date. If there are no packages for your Linux distribution, you can setup ownCloud from scratch using a classic LAMP stack (Linux, Apache, MySQL/MariaDB, PHP).
 As the ownCloud tar archive contains all of the required third-party PHP libraries, there are not many prerequisites for installation. However, ownCloud require that PHP has a set of extensions installed, enabled, and configured. For more information, see [Prerequisites](https://doc.owncloud.com/server/10.0/admin_manual/installation/source_installation.html#prerequisites). 
 ## How to Install the Required Packages
@@ -73,7 +73,6 @@ On Ubuntu 16.04 LTS server, install the required modules for ownCloud installati
 *	The Hash extension is available from PHP 5.1.2 by default
 *	php7.2-xml provides DOM, SimpleXML, XML, & XMLWriter
 *	php7.2-zip provides zlib
-
 ### smbclient
 To install smbclient, you can use the following script. It first installs PEAR, which at the time of writing installs only version 1.9.4. However, smbclient requires version 1.9.5. So, the final two commands upgrade PEAR to version 1.9.5 and then install smbclient using Pecl.
 ```
@@ -102,11 +101,10 @@ If you are planning to run additional apps, you might require additional package
 
 **Note:**
 During the installation of the MySQL/MariaDB server, you will be prompted to create a root password. Be sure to remember your password as you will need it during ownCloud database setup.
-
 ### Extensions on RedHat Enterprise Linux 7.2
 On RedHat Enterprise Linux, you need the following extensions:
-```
-# Enable the RHEL Server 7 repository
+ ```
+ # Enable the RHEL Server 7 repository
     subscription-manager repos --enable rhel-server-rhscl-7-eus-rpms
 
 # Install the required packages
@@ -218,7 +216,6 @@ To install ownCloud, first [download the source](https://owncloud.org/install/#i
 Next, you need to set your webserver user to be the owner of your unpacked owncloud directory, as in the example below.
 ```$ sudo chown -R www-data:www-data /var/www/owncloud/```
 Use the ```occ``` command, from the root directory of the ownCloud source, to perform the installation. The following examples shows how to perform installation.
-
 ```
 # Assuming you’ve unpacked the source to /var/www/owncloud/
 $ cd /var/www/owncloud/
@@ -267,7 +264,7 @@ docker-compose up -d
 When the process completes, check whether all the containers have successfully started, by running the ```docker-compose ps``` command. The following example shows the output when all the containers have started:
 ```
  Name               Command                             State       Ports
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
 server_db_1         /usr/bin/entrypoint /bin/s ...      Up          3306/tcp
 server_owncloud_1   /usr/local/bin/entrypoint  ...      Up          0.0.0.0:8080->8080/tcp
 server_redis_1      /bin/s6-svscan /etc/s6              Up          6379/tcp
@@ -277,10 +274,11 @@ When all the containers are running, it takes a few minutes for ownCloud to be f
 # Logging In
 To log in to the ownCloud UI, open ```https://localhost``` in your browser of choice. The ownCloud login screen is displayed.
 
-![LoginPage](/docs/LogIn.png)
+![LoginPage](/LogIn.png)
 
  Enter the username and password that you stored in ```.env``` earlier.
 The first time that you access the login page through HTTPS, a browser warning appears, as the SSL certificate in the Docker setup is self-signed. However, the self-signed certificate can be overwritten with a valid certificate within the host volume.
+
 
 # Adding a User Account
 On the User management page of ownCloud Web UI, you can add a new user account.
